@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Content-type" content="text/css">
+			<title>登録フォーム</title>
+				<!-- // <script language="Javascript"> -->
+					<!-- // resizeTo(532,640); -->
+				<!-- // </script> -->
+			<link rel="stylesheet" href="post.css" type="text/css">
+	</head>
+	<body>
+		<div class="form" id="form">
+		<!-- <h1>新規ID登録</h1> -->
+			<form action="" method="post" enctype="application/x-www-form-urlencoded" target="done.html">
+				<p>
+					新規ID:<br><input id="text" type="text" name="userid" size="8"><br>
+					<em>※半角英数字8字以内</em><br>
+				</p>
+				<p>
+					パスワード:<br><input id="text" type="password" name="password" size="8"><br>
+					<em>※半角英数字8字以内</em><br>
+				</p>
+				<p>
+					パスワードの再入力:<br><input id="text" type="password" name="check" size="8">
+				</p>
+				<p>
+					メールアドレス:<br>
+						<input id="text" type="email" name="username">
+				</p>
+				<p>
+					性別:<br>
+						<input id="sex" type="radio" name="sex" value="男性">男性
+						<input id="sex" type="radio" name="sex" value="女性">女性
+				</p>
+				<p>
+					年齢:<br>
+						<select name="age" id="age">
+							<option value="10代未満">10代未満<br></option>
+							<option value="10代">10代<br></option>
+							<option value="20代">20代<br></option>
+							<option value="30代">30代<br></option>
+							<option value="40代">40代<br></option>
+							<option value="50代">50代<br></option>
+							<option value="60代">60代<br></option>
+							<option value="70代">70代<br></option>
+							<option value="80代">80代以上<br></option>
+						</select>
+						<!-- <input id="old" type="text" name="old"> -->
+				</p>
+				<p>
+					職業:<br>
+						<select name="job" id="job">
+							<option value="engineer">エンジニア<br></option>
+							<option value="housewife">主婦</option>
+							<option value="teacher">教師</option>
+							<option value="athlete">スポーツ選手</option>
+							<option value="parttimer">フリーター</option>
+							<option value="restuarant">飲食店</option>
+							<option value="none">無職</option>
+							<option value="student">学生</option>
+							<option value="other">その他</option>
+						</select>
+				</p>
+				<br>
+				<input id="submit" type="submit" value="送信">
+				<input id="reset" type="reset" value="取り消し">
+				<br>
+				<br>
+
+
+			</form>
+		</div>
+	
+	</body>
+</html>

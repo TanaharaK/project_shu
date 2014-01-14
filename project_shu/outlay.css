@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body{}
+
+form{}
+
+p{}
+
+#date{
+	margin-left: 25px;
+	margin-top: 25px;
+}
+#submit{
+	/*font-family: serif;*/
+}
+.monthly{
+	float: left;
+	background-color: yellow;
+	width: 400px;
+	height: 400px;
+}
+.dayly{
+	float: left;
+	background-color: aqua;
+	width: 400px;
+	height: 400px;
+}
+#damage{
+
+}

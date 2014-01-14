@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/css">
+		<script src="jquery-2.0.3.min.js"></script>
+		<!-- <meta http-equiv="Content-Type" content="text/javascript"> -->
+		<title>USER PAGE</title>
+		<link rel="stylesheet" href="user.css" type="text/css">
+		<script language="javascript">
+			function ttlValue(){
+				txt = 7;
+				ttl = 0;
+				for(i=0; i<txt; i++){
+					if(document.dayly.elements[i].value != ""){
+						ttl += eval(document.dayly.elements[i].value);
+					};
+				};
+				document.dayly.result.value = ttl;
+			};
+
+			function numOnly(){
+				m = String.formCharCode(event.keyCode);
+				if("0123456789\b".indexOf(m,0) < 0) return false;
+				return true;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="user" id="user">
+			<br><input id="logout" type="button" name="logout" value="LOGOUT">する<br>
+			<!-- <a href="logout.php" id="logout">LOGOUT</a>する<br><br><br> -->
+			<br><input id="inc" type="button" name="inc" value="今月の収入"><br><br><br>
+			<input id="dam" type="button" name="dam" value="ダメージ内訳"><br><br><br>
+			<input id="ydam" type="button" name="ydam" value="年間ダメージ表">
+
+		<script>
+			windouw.onload = function(){
+				document.getElementById("logout").onclick = function(){
+						location.href = "logout.php";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("inc").onclick = function(){
+						location.href = "income.html";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("dam").onclick = function(){
+						location.href = "";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("ydam").onclick = function(){
+						location.href = "";
+					};
+				};
+		</script>
+		</div>
+		<div calss="out" id="out">
+			<form action="" name="dayly" metod="post" enctype="application/x-www-form-urlencoded">
+<!-- 				<p>
+					<input type="date" name="date">の出費
+				</p> -->
+				<p>
+					食費→<input type="text" size="15" name="meal" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					交通費→<input type="int" size="15" name="drv" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					交際費→<input type="int" size="15" name="ent" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					消耗品費→<input type="int" size="15" name="cons" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					娯楽費→<input type="int" size="15" name="joy" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					医療費→<input type="int" size="15" name="med" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<p>
+					貯金→<input type="int" size="20" name="dep" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
+				</p>
+				<input id="submit" type="submit" value="送信">
+				<input id="reset" type="reset" value="変更">
+			</form>
+		</div>
+		<div id="day">
+			<input type="button" value="今日のお財布ダメージは..."　onClick="ttlValue()">
+			<input type="text" name="result" size=15>
+		</div>
+	</body>
+</html>
