@@ -60,10 +60,30 @@
 		</div>
 		<div calss="out" id="out">
 			<form action="" name="dayly" metod="post" enctype="application/x-www-form-urlencoded">
-				<p>
+<!-- 				<p>
 					<input type="date" name="date">の出費
-				</p>
-				<p>
+				</p> -->
+				<input type='date' name='date2'>
+				<button>編集</button>
+					<script>
+						jQuery(function($){
+						$('button').click(function(){
+							var day = $('input[name=date]').val();//インプット欄の日付を取得
+							$.ajax({
+									type: 'POST',
+									dataType:'json',
+									url:'api.php',
+									data:{
+											item:day
+										},
+									success:function(data) {
+															alert(data);
+															},
+									error:function(XMLHttpRequest, textStatus, errorThrown) {}
+								});
+						});
+					</script>
+<!--				<p>
 					食費→<input type="text" size="15" name="meal" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
 				</p>
 				<p>
@@ -83,14 +103,13 @@
 				</p>
 				<p>
 					貯金→<input type="int" size="20" name="dep" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<input id="submit" type="submit" value="送信">
-				<input id="reset" type="reset" value="変更">
+				</p> -->
+
 			</form>
 		</div>
 		<div id="day" style="float: left; margin-left: 25%;">
-			<input type="button" value="今日のお財布ダメージは..."　onClick="ttlValue()">
-			<input type="text" name="result" size=15>
+			<input type="button" value="今日のお財布ダメージは...">
+			<input type="text" name="result" size="15">
 		</div>
 	</body>
 </html>
