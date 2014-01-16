@@ -1,0 +1,30 @@
+@charset="utf-8";
+
+#user{
+	float: left;
+	margin-left: 25%;
+	/*margin-top: 10%;*/
+	/*margin-right: -70%;*/
+	padding-bottom: 150px;
+}
+
+#out{
+	/*position: absolute;*/
+	vertical-align: middle;
+	text-align: right;
+	float: left;
+	border: 3px solid blue;
+	margin: 30px 30px 40px 25%;
+	padding: 5px 5px 5px 5px;
+}
+#inc{
+	
+
+}
+
+#dam{
+
+}
+#ydam{
+
+}
