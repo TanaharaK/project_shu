@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//git用
 try{
 	$dbh = new PDO('mysql:host=localhost;dbname=testdb','testus','pass');
 }catch(PDOException $e){
