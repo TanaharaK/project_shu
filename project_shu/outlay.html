@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Content-Type" content="text/css">
+				<title>出費の管理ページ</title>
+			<link rel="stylesheet" href="outlay.css" content="text/css">
+	</head>
+	<body>
+		<form action="" method="post" enctype="application/x-www-form-urlencoded" target="" target style="min-width: 800px;">
+			<div id="date" name="date">
+				<p>
+					<select name="month" id="month">
+						<option value="1月">1月</option>
+						<option value="2月">2月</option>
+						<option value="3月">3月</option>
+						<option value="4月">4月</option>
+						<option value="5月">5月</option>
+						<option value="6月">6月</option>
+						<option value="7月">7月</option>
+						<option value="8月">8月</option>
+						<option value="9月">9月</option>
+						<option value="10月">10月</option>
+						<option value="11月">11月</option>
+						<option value="12月">12月</option>
+					</select>
+					<select name="day" id="day">
+						<option value="1日">1日</option>
+						<option value="2日">2日</option>
+						<option value="3日">3日</option>
+						<option value="4日">4日</option>
+						<option value="5日">5日</option>
+						<option value="6日">6日</option>
+						<option value="7日">7日</option>
+						<option value="8日">8日</option>
+						<option value="9日">9日</option>
+						<option value="10日">10日</option>
+						<option value="11日">11日</option>
+						<option value="12日">12日</option>
+						<option value="13日">13日</option>
+						<option value="14日">14日</option>
+						<option value="15日">15日</option>
+						<option value="16日">16日</option>
+						<option value="17日">17日</option>
+						<option value="18日">18日</option>
+						<option value="19日">19日</option>
+						<option value="20日">20日</option>
+						<option value="21日">21日</option>
+						<option value="22日">22日</option>
+						<option value="23日">23日</option>
+						<option value="24日">24日</option>
+						<option value="25日">25日</option>
+						<option value="26日">26日</option>
+						<option value="27日">27日</option>
+						<option value="28日">28日</option>
+						<option value="29日">29日</option>
+						<option value="30日">30日</option>
+						<option value="31日">31日</option>
+					</select><td nowrap> の出費</td>
+				</p>
+			</div>
+			<div class="dayly" name="monthly">
+				<p>
+					食費→<input type="text" size="15" name="meal" value="">円
+				</p>
+				<p>
+					交通費→<input type="text" size="15" name="drv">円
+				</p>
+				<p>
+					交際費→<input type="text" size="15" name="ent">円
+				</p>
+				<p>
+					消耗品費→<input type="text" size="15" name="cons">円
+				</p>
+				<p>
+					娯楽費→<input type="text" size="15" name="joy">円
+				</p>
+				<p>
+					医療費→<input type="text" size="15" name="med">円
+				</p>
+				<p>
+					貯金→<input type="text" size="20" name="dep">円
+				</p>
+			</div>
+			<div class="monthly" name="monthly">
+				<p>月末のみの入力項目</p>
+					<p>
+						ローン→<input type="text" size="15">円
+					</p>
+					<p>
+						家賃費→<input type="text" size="15">円
+					</p>
+					<p>
+						通信費→<input type="text" size="15">円
+					</p>
+					<p>
+						光熱費→<input type="text" size="15">円
+					</p>
+			</div>
+			<div id="damege" style="clear: both;">
+				<p>
+					今日のお財布<em>ダメージ</em><br>
+					<script>
+					</script>
+				</p>
+				<p>
+					今月の累計家計<em>ダメージ</em><br>
+					<script>
+					</script>
+				</p>
+				<input id="submit" type="submit" name="submit" value="家計簿へ書き込む">
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/css">
+    <title>サンプルアプリケーション</title>
+    <link rel="stylesheet" href="sample.css" type="text/css">
+  </head>
+
+  <body>
+    <form id="loginForm" name="loginForm" action="<?php print($_SERVER['PHP_SELF']) ?>" method="POST">
+      <fieldset>
+        <legend align="center">LOGIN PAGE</legend>
+          <div><?php echo $errorMessage ?></div>
+            <label for="userid">Your ID  </label><input type="text" id="userid" name="userid" value="<?php echo $viewUserId ?>"><br>
+            <label for="password">Password</label><input type="password" id="password" name="password" value=""><br>
+            <label></label><input type="submit" id="login" name="login" value="GO!">
+      </fieldset>
+    </form>
+  </body>
+</html>

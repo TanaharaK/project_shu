@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+div{
+	line-height: 150%;
+	font-family: arial,sans-serif;
+	/*line-height: 10px;*/
+}
+body{
+	background-color:lightblue;
+	text-align: center;
+	/*line-height: 3px;*/
+}
+label{
+	line-height: 50px;
+	font-family: tahoma;
+}
+#login{
+	color: blue;
+
+}
+fieldset{
+	text-align: center;
+	border: none;
+}
+legend{
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 20px;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>left</title>
+		</head>
+		<body>
+			<div>
+			<a href="logout.php"　id="logout">LOGOUT</a>する<br><br><br>
+			<input id="post1" type="button" value="今日の出費">
+			<input id="post2" type="button" value="今月の収入"><br><br><br>
+			<input id="get1" type="button" value="ダメージ内訳"><br><br><br>
+			<input id="get2" type="button" value="年間ダメージ表">
+			</div>
+		<script>
+			window.onload = function() {
+				document.getElementById("post1").onclick = function() {
+						location.href = "outlay.html";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("post2").onclick = function(){
+						location.href = "income.html";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("get1").onclick = function(){
+						location.href = "";
+					};
+				};
+			window.onload = function(){
+				document.getElementById("get2").onclick = function(){
+						location.href = "";
+					};
+				};
+		</script>
+		</body>
+	</html>
