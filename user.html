@@ -9,23 +9,23 @@
 		<title>USER PAGE</title>
 		<link rel="stylesheet" href="user.css" type="text/css">
 		<script language="javascript">
-			function ttlValue(){
-				txt = 7;
-				ttl = 0;
-				for(i=0; i<txt; i++){
-					if(document.dayly.elements[i].value != ""){
-						ttl += eval(document.dayly.elements[i].value);
-					};
-				};
-				document.dayly.result.value = ttl;
-			};
+		//	function ttlValue(){
+		//		txt = 7;
+		//		ttl = 0;
+		//		for(i=0; i<txt; i++){
+		//			if(document.dayly.elements[i].value != ""){
+		//				ttl += eval(document.dayly.elements[i].value);
+		//			};
+		//		};
+		//		document.dayly.result.value = ttl;
+		//	};
 
-			function numOnly(){
-				m = String.formCharCode(event.keyCode);
-				if("0123456789\b".indexOf(m,0) < 0) return false;
-				return true;
-			};
-		</script>
+		//	function numOnly(){
+		//		m = String.formCharCode(event.keyCode);
+		//		if("0123456789\b".indexOf(m,0) < 0) return false;
+		//		return true;
+		//	};
+		// </script>
 	</head>
 	<body>
 		<div class="user" id="user">
@@ -82,6 +82,11 @@
 									error:function(XMLHttpRequest, textStatus, errorThrown) {}
 								});
 						});
+						window.onload = function(){
+							document.getElementById("date2").onclick = function(){
+								location.href = "edit.html";
+									};
+								};
 					</script>
 <!--				<p>
 					食費→<input type="text" size="15" name="meal" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
