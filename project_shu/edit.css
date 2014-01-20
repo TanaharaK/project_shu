@@ -2,7 +2,9 @@
 
 body{}
 
-form{}
+form{
+	margin-top: 20px;
+}
 
 p{}
 
@@ -16,6 +18,7 @@ p{}
 .monthly{
 	float: left;
 	background-color: yellow;
+	margin-left: 5px;
 	width: 400px;
 	height: 400px;
 }
