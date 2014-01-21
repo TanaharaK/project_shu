@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+head{
+
+}
+
+body{
+
+}
+
+div{
+
+}
+.box{
+	float: left;
+	position: relative;
+	height: 600px;
+	width: 400px;
+	margin-left: 10px;
+	margin-top: 15px;
+	border: 1px solid black;
+	text-align: right;
+}
+#bar{
+	/*position: absolute;*/
+	padding-top: 65%;
+	padding-right: 15%;
+	bottom: 0;
+	text-align: right;
+}
+
