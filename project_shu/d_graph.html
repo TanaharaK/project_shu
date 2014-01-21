@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="d_graph.css" content="text/css">
+	<title>日別内訳グラフ</title>
+	<script src="Chart.js"></script>
+</head>
+<body>
+	<div id="graph">
+		<canvas id="pie" height="600" width="500" style="float:left;"></canvas>
+		<script>
+		var pieData = [
+			{
+				value: 30,
+				color:"#aaf2fb"
+			},
+			{
+				value: 50,
+				color: "#ffb6b9"
+			},
+			{
+				value: 120,
+				color: "#ffe361"
+			},
+			{
+				value: 170,
+				color: "#fbaa6e"
+            },
+            {
+            	value: 70,
+            	color: "#A8BECB"
+            },
+			{
+				value: 100,
+				color: "gray"
+			},
+			{
+				value: 85,
+				color: "lightgreen"
+
+			}
+        ];
+
+		var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+
+		</script>
+	</div>
+	<div class="box">
+		<div id="bar">
+			<p>test</p>
+		</div>
+	</div>
+
+</body>
+</html>
