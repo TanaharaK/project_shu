@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html>
 	<head>
-			<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-				<title></title>
-			<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
+		<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery-2.0.3.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery("#form").validationEngine();
+			});
+		</script>
+		<meta charset="utf-8">
+				<title>収入入力ページ</title>
+		<link　rel="stylesheet" href="income.css">
 	</head>
-	<body>
-		<div>
-			
+	<body style="background-color:#aaf2fb;">
+		<div id="form" class="box_1" style="height:600px; width:400px; background-color:#99ff66; margin-left:35%; margin-top:30px; border:1px solid #99ff66; border-radius:7px;">
+			<p style="text-align:center; color:white; font-size:22px; font-weight:bold; font-family:fantasy;">お給料の入力</p>
+			<div id="post" style="height:400px; width:300px; margin-left:50px;">
+				<form action="" name="inc" metod="post" enctype="application/x-www-form-urlencoded" style="text-align:center; margin-top:50px;">
+					<input type='date' name='date' class="form-date" style="margin-top:50px;　border-radius:8px; border:none;" />
+					<br>
+					<input type="int" name="val" id="val" class="form-val" value="0" class="validate[required,custom[number]]" style="margin-top:100px; text-align:right; font-size:18px; padding-right:5px; height:25px; margin-left:20px; width:200px; border:1px solid #99ff66; border-radius:6px;" />￥
+					<br>
+					<p style="color:white;">入力が完了したらボタンを押してください</p>
+					<input type="submit" value="submit" style="cursor:pointer; margin-top:70px; margin-right:15px; border:1px solid #99ff66; border-radius:6px; width:80px; height:40px; font-size:18px; background-color:#3399ff; color:white;" />
+				</form>
+			</div>
 		</div>
+		<script>
+			$(function(){
+				$('submit').click(function(){
+					//var day = $('input[name=date]').val();//インプット欄の日付を取得
+
+					var day = $(".form-date").val();
+					var val = $(".form-val").val();
+
+					$.ajax({
+						type: 'POST',
+						dataType:'json',/*datatypeに変更があればここいじる*/
+						url:'api.php',/*ここに目的のアドレス入力*/
+						data:{
+							item:day,
+							item:val
+						},
+						success:function(data) {
+							alert(data);
+						},
+						error:function(XMLHttpRequest, textStatus, errorThrown) {}
+					});
+				});
+			});
+			// window.onload = function(){
+			// 	document.getElementById("date").onClick = function(){
+			// 		location.href = "";
+			// 	};
+			// };
+		</script>
 	</body>
 </html>
