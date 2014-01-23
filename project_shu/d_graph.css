@@ -18,14 +18,47 @@ div{
 	width: 400px;
 	margin-left: 10px;
 	margin-top: 15px;
-	border: 1px solid black;
+	border: 1px solid white;
 	text-align: right;
 }
 #bar{
-	/*position: absolute;*/
-	padding-top: 65%;
-	padding-right: 15%;
-	bottom: 0;
+	/*background-color: red;*/
+	position: absolute;
+	width:150px;
+	/*margin-top: 50%;*/
+	/*margin-left: 20%;*/
+	/*padding-top: 65%;*/
+	/*padding-right: 15%;*/
 	text-align: right;
 }
+.sample{
+	height: 20px;
+	width: 170px;
+	margin-top: 30px;
+	padding-left: 30px;
+	border:1px solid white;
+	border-radius: 5px;
+}
+#a{
+	background-color: #aaf2fb;
+}
+#b{
+	background-color: #ffb6b9;
 
+}
+#c{
+	background-color: #ffe361;
+}
+#d{
+	background-color: #fbaa6e;
+
+}
+#e{
+	background-color: #A8BECB;
+}
+#f{
+	background-color: gray;
+}
+#g{
+	background-color: lightgreeen;
+}
