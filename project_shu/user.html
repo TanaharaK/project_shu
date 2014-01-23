@@ -27,14 +27,12 @@
 		//	};
 		// </script>
 	</head>
-	<body>
+	<body style="background-color:#aaf2fb;">
 		<div class="user" id="user">
-			<br><input id="logout" type="button" name="logout" value="LOGOUT">する<br>
-			<!-- <a href="logout.php" id="logout">LOGOUT</a>する<br><br><br> -->
-			<br><input id="inc" type="button" name="inc" value="今月の収入"><br><br><br>
-			<input id="dam" type="button" name="dam" value="ダメージ内訳"><br><br><br>
-			<input id="ydam" type="button" name="ydam" value="年間ダメージ表">
-
+			<br><input type="button" value="LOGOUT" style="cursor:pointer;" onClick="location.href='logout.php'">する<br><br><br>
+			<input type="button" value="今月の収入" style="cursor:pointer;" onClick="location.href='income.html'" ><br><br><br>
+			<input type="button" value="ダメージ内訳" style="cursor:pointer;" onClick="location.href='d_graph.html'"><br><br><br>
+			<input type="button" value="年間ダメージ表" style="cursor:pointer;" onClick="location.href='y_graph.html'"><br><br><br>
 		<script>
 			windouw.onload = function(){
 				document.getElementById("logout").onclick = function(){
@@ -48,22 +46,22 @@
 				};
 			window.onload = function(){
 				document.getElementById("dam").onclick = function(){
-						location.href = "";
+						location.href = "d_graph.html";
 					};
 				};
 			window.onload = function(){
 				document.getElementById("ydam").onclick = function(){
-						location.href = "";
+						location.href = "y_graph.html";
 					};
 				};
 		</script>
 		</div>
 		<div calss="out" id="out">
 			<form action="" name="dayly" metod="post" enctype="application/x-www-form-urlencoded">
-<!-- 				<p>
+<!--				<p>
 					<input type="date" name="date">の出費
 				</p> -->
-				<input type='date' name='date2'>
+				<input type='date' name='date'>
 				<button>編集</button>
 					<script>
 						jQuery(function($){
@@ -71,8 +69,8 @@
 							var day = $('input[name=date]').val();//インプット欄の日付を取得
 							$.ajax({
 									type: 'POST',
-									dataType:'json',
-									url:'api.php',
+									dataType:'json',/*datatypeに変更があればここ変更*/
+									url:'api.php',/*ここに目的のアドレス入力*/
 									data:{
 											item:day
 										},
