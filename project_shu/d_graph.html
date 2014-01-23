@@ -8,47 +8,53 @@
 </head>
 <body>
 	<div id="graph">
-		<canvas id="pie" height="600" width="500" style="float:left;"></canvas>/*ここでcanvasの設置*/
-		<script>/*これ以下のvalueにphpの呼び出しを代入*/
+		<canvas id="pie" height="600" width="500" style="float:left;"></canvas>
+			<script>
 		var pieData = [
 			{
-				value: 30,
+				value: 30,/*a*/
 				color:"#aaf2fb"
 			},
 			{
-				value: 50,
+				value: 50,/*b*/
 				color: "#ffb6b9"
 			},
 			{
-				value: 120,
+				value: 120,/*c*/
 				color: "#ffe361"
 			},
 			{
-				value: 170,
+				value: 170,/*d*/
 				color: "#fbaa6e"
             },
             {
-            	value: 70,
-            	color: "#A8BECB"
+				value: 70,/*e*/
+				color: "#A8BECB"
             },
 			{
-				value: 100,
+				value: 100,/*f*/
 				color: "gray"
 			},
 			{
-				value: 85,
+				value: 85,/*g*/
 				color: "lightgreen"
-
 			}
-        ];
+			];
 
 		var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
 
 		</script>
 	</div>
 	<div class="box">
-		<div id="bar">/*グラフに対応する色の説明*/
-			<p>test</p>
+		<div id="bar">
+			<p id="a" class="sample"></p>
+			<p id="b" class="sample"></p>
+			<p id="c" class="sample"></p>
+			<p id="d" class="sample"></p>
+			<p id="e" class="sample"></p>
+			<p id="f" class="sample"></p>
+			<p id="g" class="sample"></p>
+			<!-- /* ここに当日の日付を表示するロジック挿入 ↓*/ -->
 		</div>
 	</div>
 
