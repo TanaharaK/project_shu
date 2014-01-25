@@ -5,114 +5,85 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<meta http-equiv="Content-Type" content="text/css">
 		<script src="jquery-2.0.3.min.js"></script>
-		<!-- <meta http-equiv="Content-Type" content="text/javascript"> -->
 		<title>USER PAGE</title>
 		<link rel="stylesheet" href="user.css" type="text/css">
-		<script language="javascript">
-		//	function ttlValue(){
-		//		txt = 7;
-		//		ttl = 0;
-		//		for(i=0; i<txt; i++){
-		//			if(document.dayly.elements[i].value != ""){
-		//				ttl += eval(document.dayly.elements[i].value);
-		//			};
-		//		};
-		//		document.dayly.result.value = ttl;
-		//	};
-
-		//	function numOnly(){
-		//		m = String.formCharCode(event.keyCode);
-		//		if("0123456789\b".indexOf(m,0) < 0) return false;
-		//		return true;
-		//	};
-		// </script>
 	</head>
 	<body style="background-color:#aaf2fb;">
 		<div class="user" id="user">
-			<br><input type="button" value="LOGOUT" style="cursor:pointer;" onClick="location.href='logout.php'">する<br><br><br>
-			<input type="button" value="今月の収入" style="cursor:pointer;" onClick="location.href='income.html'" ><br><br><br>
-			<input type="button" value="ダメージ内訳" style="cursor:pointer;" onClick="location.href='d_graph.html'"><br><br><br>
-			<input type="button" value="年間ダメージ表" style="cursor:pointer;" onClick="location.href='y_graph.html'"><br><br><br>
+			<br>
+				<input type="button" value="LOGOUT" style="cursor:pointer;" onClick="location.href='logout.php'">する
+			<br>
+			<br>
+			<br>
+				<input id="inc" type="button" value="今月の収入" onClick="location.href='income.html'" >
+			<br>
+			<br>
+			<br>
+				<input id="dam" type="button" value="ダメージ内訳" onClick="location.href='d_graph.html'">
+			<br>
+			<br>
+			<br>
+				<input id="ydam" type="button" value="年間ダメージ表" onClick="location.href='y_graph.html'">
+			<br>
+			<br>
+			<br>
 		<script>
-			windouw.onload = function(){
-				document.getElementById("logout").onclick = function(){
-						location.href = "logout.php";
-					};
-				};
-			window.onload = function(){
-				document.getElementById("inc").onclick = function(){
-						location.href = "income.html";
-					};
-				};
-			window.onload = function(){
-				document.getElementById("dam").onclick = function(){
-						location.href = "d_graph.html";
-					};
-				};
-			window.onload = function(){
-				document.getElementById("ydam").onclick = function(){
-						location.href = "y_graph.html";
-					};
-				};
-		</script>
+		//	windouw.onload = function(){
+		//		document.getElementById("logout").onclick = function(){
+		//				location.href = "logout.php";
+		//			};
+		//		};
+		//	window.onload = function(){
+		//		document.getElementById("inc").onclick = function(){
+		//				location.href = "income.html";
+		//			};
+		//		};
+		//	window.onload = function(){
+		//		document.getElementById("dam").onclick = function(){
+		//				location.href = "d_graph.html";
+		//			};
+		//		};
+		//	window.onload = function(){
+		//		document.getElementById("ydam").onclick = function(){
+		//			location.href = "y_graph.html";
+		//		};
+		//		};
+		// </script>
 		</div>
 		<div calss="out" id="out">
-			<form action="" name="dayly" metod="post" enctype="application/x-www-form-urlencoded">
+			<form　action="" name="dayly" metod="post" enctype="application/x-www-form-urlencoded" style="padding-left: 10px;">
 <!--				<p>
 					<input type="date" name="date">の出費
 				</p> -->
-				<input type='date' name='date'>
-				<button>編集</button>
-					<script>
-						jQuery(function($){
-						$('button').click(function(){
-							var day = $('input[name=date]').val();//インプット欄の日付を取得
-							$.ajax({
-									type: 'POST',
-									dataType:'json',/*datatypeに変更があればここ変更*/
-									url:'api.php',/*ここに目的のアドレス入力*/
-									data:{
-											item:day
-										},
-									success:function(data) {
-															alert(data);
+				<input id="date" type='date' name='date'>
+					<button id="edit">編集</button>
+						<script>
+							jQuery(function($){
+							$('button').click(function(){
+								var day = $('date').val();//インプット欄の日付を取得
+								$.ajax({
+										type: 'POST',
+										dataType:'json',/*datatypeに変更があればここ変更*/
+										url:'api.php',/*ここに目的のアドレス入力*/
+										data:{
+												item:day
+											},
+										success:function(data) {
+																alert(data);
 															},
-									error:function(XMLHttpRequest, textStatus, errorThrown) {}
-								});
-						});
-						window.onload = function(){
-							document.getElementById("date2").onclick = function(){
-								location.href = "edit.html";
-									};
-								};
-					</script>
-<!--				<p>
-					食費→<input type="text" size="15" name="meal" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					交通費→<input type="int" size="15" name="drv" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					交際費→<input type="int" size="15" name="ent" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					消耗品費→<input type="int" size="15" name="cons" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					娯楽費→<input type="int" size="15" name="joy" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					医療費→<input type="int" size="15" name="med" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p>
-				<p>
-					貯金→<input type="int" size="20" name="dep" value="0" style="text-align:right;" onkeyDown="retuen numOnly()">円
-				</p> -->
-
+										error:function(XMLHttpRequest, textStatus, errorThrown) {}
+										});
+									});
+								window.onload = function(){
+									document.getElementById("date2").onclick = function(){
+											location.href = "edit.html";};
+										};
+						</script>
 			</form>
 		</div>
 		<div id="day" style="float: left; margin-left: 25%;">
-			<input type="button" value="今日のお財布ダメージは...">
-			<input type="text" name="result" size="15">
+			<input type="button" id="dam_b" value="今日のお財布ダメージは...">
+			<input type="text" id="result" name="result" value="0" size="15">
 		</div>
 	</body>
 </html>
