@@ -28,13 +28,14 @@
 					<input type="submit" value="submit" style="cursor:pointer; margin-top:70px; margin-right:15px; border:1px solid #99ff66; border-radius:6px; width:80px; height:40px; font-size:18px; background-color:#3399ff; color:white;" />
 				</form>
 			</div>
+			<input type="button" value="マイページへ戻る" onClick="location.href='user.html'">
 		</div>
 		<script>
 			$(function(){
 				$('submit').click(function(){
 					//var day = $('input[name=date]').val();//インプット欄の日付を取得
 
-					var day = $(".form-date").val();
+					var d$(".form-date").val();
 					var val = $(".form-val").val();
 
 					$.ajax({
