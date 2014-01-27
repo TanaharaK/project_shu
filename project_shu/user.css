@@ -13,7 +13,7 @@
 	/*vertical-align: middle;*/
 	text-align: center;
 	float: left;
-	border: 3px solid #aaf2fb;
+	border: 3px solid white;
 	border-radius: 10px;
 	background-color: lime;
 	margin: 90px 0px 70px 10%;
@@ -22,13 +22,13 @@
 	height: 50px;
 }
 #date{
-	border: 1px solid lime;
+	border: 1px solid white;
 	border-radius: 5px;
 	width: 200px;
 	height: 40px;
 }
 #inc{
-	border: 1px solid #aaf2fb;
+	border: 1px solid white;
 	background-color: #0e00b0;
 	color: white;
 	font-size: 25px;
@@ -42,7 +42,7 @@
 	background-color: orangered;
 	color: white;
 	font-size: 25px;
-	border: 1px solid #aaf2fb;
+	border: 1px solid white;
 	border-radius: 5px;
 	cursor: pointer;
 	width: 200px;
@@ -52,7 +52,7 @@
 	background-color: mediumpurple;
 	color: white;
 	font-size: 25px;
-	border: 1px solid #aaf2fb;
+	border: 1px solid white;
 	border-radius: 5px;
 	cursor: pointer;
 	width: 200px;
@@ -60,7 +60,7 @@
 }
 #edit{
 	font-size: 18px;
-	border: 3px solid lime;
+	border: 3px solid white;
 	border-radius: 5px;
 	/*margin-top: 2px;*/
 	cursor: pointer;
@@ -71,7 +71,7 @@
 	background-color: darkmagenta;
 	color: white;
 	font-size: 15px;
-	border: 1px solid #aaf2fb;
+	border: 1px solid white;
 	border-radius: 5px;
 	cursor:pointer;
 	width:180px;
@@ -79,7 +79,7 @@
 	margin-left:-50%
 }
 #result{
-	text-align: right;
+	text-align: center;
 	width: 200px;
 	height: 40px;
 	font-size: 22px;
