@@ -5,60 +5,95 @@ head{
 }
 
 body{
+	background-color: snow;
 
 }
 
 div{
 
 }
+/*#graph{
+	margin-left: 25%;
+}*/
 .box{
 	float: left;
 	position: relative;
 	height: 600px;
 	width: 400px;
-	margin-left: 10px;
+	margin-left: 100px;
 	margin-top: 15px;
 	border: 1px solid white;
-	text-align: right;
+	text-align: center;
 }
 #bar{
 	/*background-color: red;*/
 	position: absolute;
 	width:150px;
 	/*margin-top: 50%;*/
-	/*margin-left: 20%;*/
+	margin-left: 20%;
 	/*padding-top: 65%;*/
 	/*padding-right: 15%;*/
 	text-align: right;
 }
 .sample{
-	height: 20px;
+
+	height: 30px;
 	width: 170px;
 	margin-top: 30px;
-	padding-left: 30px;
+	/*padding-left: 30px;*/
 	border:1px solid white;
 	border-radius: 5px;
+	text-align: center;
+}
+#date{
+	background-color: snow;
+	color: black;
+	padding-top: 10px;
+	font-weight: 700;
+	font-family: sans-serif;
 }
 #a{
 	background-color: #aaf2fb;
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #b{
 	background-color: #ffb6b9;
-
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #c{
 	background-color: #ffe361;
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #d{
 	background-color: #fbaa6e;
-
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #e{
 	background-color: #A8BECB;
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #f{
 	background-color: gray;
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
 }
 #g{
-	background-color: lightgreeen;
+	background-color: lightgreen;
+	color: white;
+	padding-top: 10px;
+	font-weight: 700;
+}
+#back{
+	margin-left: 500px;
 }
