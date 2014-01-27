@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html> -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -46,18 +46,26 @@
 		</script>
 	</div>
 	<div class="box">
+		<!-- <p>test</p> -->
 		<div id="bar">
-			<p id="a" class="sample"></p>
-			<p id="b" class="sample"></p>
-			<p id="c" class="sample"></p>
-			<p id="d" class="sample"></p>
-			<p id="e" class="sample"></p>
-			<p id="f" class="sample"></p>
-			<p id="g" class="sample"></p>
-			<!-- /* ここに当日の日付を表示するロジック挿入 ↓*/ -->
+			<p id="date" class="sample">test</p><!-- /* ここに当日の日付を表示するロジック挿入 ↓*/ -->
+			<!-- <p>test</p><br> -->
+			<p id="a" class="sample">食費⇒%</p><!-- ここにphp文（目的値÷全体の値）の挿入 -->
+			<p id="b" class="sample">交通費⇒%</p>
+			<p id="c" class="sample">交際費⇒%</p>
+			<p id="d" class="sample">消耗品費⇒%</p>
+			<p id="e" class="sample">娯楽費⇒%</p>
+			<p id="f" class="sample">医療費⇒%</p>
+			<p id="g" class="sample">貯金⇒%</p>
 		</div>
-		<input type="button" id="back" value="マイページへ戻る" onClick="location.href='user.html'">
 	</div>
-
+		<input type="button" id="back" value="マイページへ戻る">
+		<script>
+			window.onload = function() {
+				document.getElementById("back").onclick = function() {
+							location.href = "user.html";
+				}
+			}
+		</script>
 </body>
 </html>
