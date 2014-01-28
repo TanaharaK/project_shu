@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html, body{
 	height: 95%;
+	background-color: #66cccc;
 }
 
 body{
@@ -12,8 +13,8 @@ body{
 
 }
 #form{
-	font-family: 'ＭＳ ゴシック';
-	background-color: #d3d3d3;
+	font-family: sans-serif;
+	background-color: green;
 	border-radius: 20px;
 	border: 3px solid #f8f8ff;
 	margin: -250px 0 0 -275px;
@@ -24,6 +25,8 @@ body{
 	left: 50%;
 	height: 550px;
 	width: 500px;
+	color: #e0ffff;
+	font-weight: 600;
 
 }
 h1{
@@ -41,23 +44,28 @@ em{
 	font-size: 15px;
 	font-weight: 500;
 	font-style: normal;
-	font-family: 'ＭＳ ゴシック';
-	color: red;
+	font-family: sans-serif;
+	color: black;
 }
 #text{
 	border-radius: 3px;
+	border: 2px solid white;
+	text-align: right;
 }
 #sex{
 	border-radius: 3px;
+	border: 2px solid white;
 }
 #age{
 	border-radius: 3px;
+	border: 2px solid white;
 }
 #job{
 	border-radius: 3px;
+	border: 2px solid white;
 }
 #submit{
-	border:1px solid #777;
+	border:1px solid white;
     padding: 4px 18px;
     color: #fff;
     cursor: pointer;
@@ -65,11 +73,19 @@ em{
     border-radius: 5px;
 }
 #reset{
-	border:1px solid #777;
+	border:1px solid white;
     padding: 4px 10px;
     color: #fff;
     cursor: pointer;
     background: #428ec9;
     border-radius: 5px;
 
+}
+#back{
+	border:1px solid white;
+	color: #fff;
+	cursor: pointer;
+	background: #428ec9;
+	border-radius: 5px;
+	padding: 4px 10px;
 }
